@@ -12,15 +12,15 @@ public class SendMail {
 	    // 发件人的 邮箱 和 密码（替换为自己的邮箱和密码）
 	    // PS: 某些邮箱服务器为了增加邮箱本身密码的安全性，给 SMTP 客户端设置了独立密码（有的邮箱称为“授权码”）, 
 	    //     对于开启了独立密码的邮箱, 这里的邮箱密码必需使用这个独立密码（授权码）。
-	    public static String myEmailAccount = "111@44.cn";
-	    public static String myEmailPassword = "*****";
+	    public static String myEmailAccount = "chuyh@medishare.cn";
+	    public static String myEmailPassword = "WScyhA123456";
 
 	    // 发件人邮箱的 SMTP 服务器地址, 必须准确, 不同邮件服务器地址不同, 一般(只是一般, 绝非绝对)格式为: smtp.xxx.com
 	    // 网易163邮箱的 SMTP 服务器地址为: smtp.163.com
 	    public static String myEmailSMTPHost = "smtp.exmail.qq.com";
 
 	    // 收件人邮箱（替换为自己知道的有效邮箱）
-	    public static String receiveMailAccount = "111@qq.com";
+	    public static String receiveMailAccount = "807640981@qq.com";
 
 	    public static void main(String[] args) throws Exception {
 	        // 1. 创建参数配置, 用于连接邮件服务器的参数配置
@@ -99,7 +99,7 @@ public class SendMail {
 	        message.setSubject("打折钜惠", "UTF-8");
 
 	        // 5. Content: 邮件正文（可以使用html标签）
-	        message.setContent("XX用户你好, 今天全场5折, 快来抢购, 错过今天再等一年。。。", "text/html;charset=UTF-8");
+	        message.setContent("XX用户你好, 今天全场5折, 快来抢购, 错过今天再等一年。。。请点击链接：www.baidu.com", "text/html;charset=UTF-8");
 
 	        // 6. 设置发件时间
 	        message.setSentDate(new Date());
